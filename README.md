@@ -8,3 +8,5 @@
 
 # Como arrancar
 1. Arrancar script: `python webCamStream.py`
+2. Entrar a http://127.0.0.1:8080
+3. Tengo que ver cómo entrar desde otras compus a esta página aún
