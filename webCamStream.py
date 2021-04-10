@@ -51,13 +51,15 @@ def generate():
 def video_feed():
     return Response(generate(), mimetype = "multipart/x-mixed-replace; boundary=frame")
 
-
+# Entrada al script
 if __name__ == '__main__':
 
+    # Iniciamos thread para leer frames desde la webcam
     t = threading.Thread(target = get_frames)
     t.daemon = True
     t.start()
 
+    # Iniciamos app web para transmitir frames
     app.run(port = 8080)
 
 vs.release()
